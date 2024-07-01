@@ -1,0 +1,93 @@
+.container-DevicePage-second-more {
+    display: flex;
+    height: 60%;
+    width: 60%;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 10%;
+    max-width: 95%;
+    border-radius: 25px;
+    margin-bottom: 2%;
+    background: #ffffff;
+    padding: 40px;
+    box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
+      0px 18px 36px rgba(166, 175, 186, 0.2);
+  }
+  
+  .container-about-us-second-more {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container-about-us-avito-2gis {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .container-about-us-second-more-text {
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 400;
+  }
+  
+  .container-about-us-avito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .busket-main-second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    height: 6vh;
+    width: 15vw;
+    margin-top: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.25s;
+    font-size: 24px;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .busket-main-second:hover {
+    background-color: #0a20e6;
+    color: white;
+  }
+  
+  .container-second-avito-2gis {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  
+  .about-us-line {
+    display: flex;
+    margin-right: 10px;
+    width: 6px;
+    height: 250px;
+    background-color: #0a20e6;
+  }
+  
+  .container-aboutus-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .container-DevicePage-second-more {
+      width: 90%;
+    }.busket-main-second{
+      width: 14vh;    
+    }.container-second-avito-2gis{
+      justify-content: space-between;
+    }
+  }
+  

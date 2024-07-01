@@ -1,0 +1,17 @@
+.signup__form-container {
+  position: relative;
+}
+
+.signup__show-password-btn {
+  position: absolute;
+  top: 36%;
+  right: 10px;
+  /* transform: translateY(-50%); */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+.signup__show-password-btn:hover {
+  color: #555;
+}

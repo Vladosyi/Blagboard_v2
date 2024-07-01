@@ -1,0 +1,26 @@
+._container{
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.cart{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.header__cart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  /* height: 100px; */
+  /* margin-left: 60px; */
+
+}
+
+.cart__title{
+  font-size: 30px;
+  padding-right: 10px;
+  color: blue;
+}

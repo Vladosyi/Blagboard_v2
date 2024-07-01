@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300&family=Poppins:wght@300;400&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+.device-item {
+  width: calc(100% / 3 - 20px);
+  /* margin-right: 40px; */
+}
+
+.device-item__container {
+  /* margin: 0 auto; */
+  /* height: 100%; */
+
+  display: flex;
+  justify-content: center;
+}
+.device-item__wrapper {
+  padding: 8px;
+  position: relative;
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
+    0px 18px 36px rgba(166, 175, 186, 0.2);
+  cursor: pointer;
+}
+
+.device-item__name-device {
+  /* width: 50%; */
+  line-height: 1.1;
+  /* margin-bottom: 5px; */
+  /* flex: 0 0 auto; */
+  font-size: 20px;
+  /* overflow-wrap: normal;  */
+   font-family: "Alegreya Sans", sans-serif;
+}
+
+.device-item__container-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.device-item__img {
+  /* margin: 0 auto; */
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.device-item__header {
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+.device-item__busket-icon {
+  width: 15px;
+}
+.device-item__busket-icon:hover {
+  transform: translateY(-3px);
+  fill: red;
+  transition: fill 0.3s ease; /* Добавляем плавный переход */
+}
+
+.device-item__footer {
+  margin: 0;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+.rating__container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+}
+.rating__img {
+  width: 15px;
+  height: 15px;
+}
+
+.device-item__price {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  color: #000;
+}
+
+@media screen and (max-width: 1025px) {
+  .device-item__img {
+    width: 90px;
+    height: 90px;
+  }
+  .device-item__name-device {
+    font-size: 17px;
+  }
+  .device-item__price {
+    font-size: 13px;
+  }
+  .rating__img {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* .d-flex {
+  margin-right: 1vh;
+  margin-left: 2vh;
+} */
+/* 
+
+
+.device-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.device-name-second {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.device-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  margin-left: 5px;
+  margin-top: 10px;
+  color: #000;
+}
+
+.device-item__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 330px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
+    0px 18px 36px rgba(166, 175, 186, 0.2);
+  cursor: pointer;
+}
+
+.device-class-name-bi-bag {
+}
+
+.device-name-devicename-second {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.device-name-devicename {
+  display: inline-block;
+  margin-left: 1vw;
+  font-family: "Alegreya Sans", sans-serif;
+  margin-top: 20px;
+}
+
+.container-device-item-second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.market-container-main:hover span {
+  color: #0a20e6;
+  opacity: 100%;
+  transition: 0.5s ease-in-out;
+}
+
+.device-name-devicename-second {
+  opacity: 25%;
+}
+
+.device-name-devicename-second:active {
+  position: relative;
+  top: 2px;
+}
+
+.device-name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 21px;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+.img-for-all {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: cover;
+} */

@@ -1,0 +1,18 @@
+.login__form-container {
+    position: relative;
+  }
+  
+  .login__show-password-btn {
+    position: absolute;
+    top: 46%;
+    right: 10px;
+    /* transform: translateY(-50%); */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #888;
+  }
+  .login__show-password-btn:hover {
+    color: #555;
+  }
+  
