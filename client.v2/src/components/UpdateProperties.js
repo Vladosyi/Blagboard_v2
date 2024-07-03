@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import { Row, Col, Button, Form } from 'react-bootstrap'
-import { createProperty, updateProperty, deleteProperty } from '../http/catalogAPI.js'
+// import { createProperty, updateProperty, deleteProperty } from '../http/catalogAPI.js'
 import uuid from 'react-uuid'
 
 const UpdateProperties = (props) => {

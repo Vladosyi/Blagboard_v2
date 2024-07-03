@@ -1,10 +1,7 @@
 import BasketList from "../components/BasketList.js";
-import { Container } from "react-bootstrap";
 import "../style/Basket.css";
-// import RecommendationBaner from "../components/RecoBaner.js";
 import RecBaner from "../components/RecBaner.jsx";
-import { useEffect, useState } from "react";
-import { fetchRecommendation } from "../http/catalogAPI.js";
+
 
 const Basket = () => {
   return (

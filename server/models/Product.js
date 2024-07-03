@@ -2,6 +2,7 @@ import { Product as ProductMapping } from './mapping.js'
 import { ProductProp as ProductPropMapping } from './mapping.js'
 import { Brand as BrandMapping } from './mapping.js'
 import { Category as CategoryMapping } from './mapping.js'
+import { Rating as RatingMapping } from './mapping.js'
 import FileService from '../services/File.js'
 import AppError from '../errors/AppError.js'
 
@@ -36,6 +37,7 @@ class Product {
                 {model: ProductPropMapping, as: 'props'},
                 {model: BrandMapping, as: 'brand'},
                 {model: CategoryMapping, as: 'category'},
+                {model: RatingMapping},
             ]
         })
 

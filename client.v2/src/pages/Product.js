@@ -18,7 +18,7 @@ const Product = () => {
   const { id } = useParams();
   const { basket } = useContext(AppContext);
   const [product, setProduct] = useState(null);
-  const [rating, setRating] = useState({});
+  const [rating, setRating] = useState(null);
   const [rate, setRate] = useState();
 
   useEffect(() => {
@@ -33,19 +33,18 @@ const Product = () => {
   };
 
   const handleAddRating = async (productId, rate) => {
-         await createRate(productId, rate);
-        // setRating(data)
-        // setRate(data.rate);
-        fetchProdRating(id).then((data) => setRating(data))
+    await createRate(productId, rate);
+    fetchProdRating(id).then((data) => setRating(data));
   };
-  
 
+  
   if (!product) {
     return <Spinner animation="border" />;
   }
 
   return (
     <Container>
+      {/* <div>fdsfds</div> */}
       <Row className="mt-3 mb-3">
         <Col lg={4}>
           {product.image ? (
@@ -68,33 +67,32 @@ const Product = () => {
           <p>Бренд: {product.brand.name}</p>
           <p>Категория: {product.category.name}</p>
           <div>
-            
-                Рейтинг: {rating.rating}, голосов {rating.votes}
-             
-            
+            Рейтинг: {rating.rating}, голосов {rating.votes}
           </div>
           <Button onClick={() => handleClick(product.id)}>
             Добавить в корзину
           </Button>
-            <select
-              id="rating"
-              name="rating"
-              value={rate}
-              onChange={(e) => setRate(e.target.value)}
-              required
-            >
-              <option value="">Рейтинг</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
+          <select
+            id="rating"
+            name="rating"
+            value={rate}
+            onChange={(e) => setRate(e.target.value)}
+            required
+          >
+            <option value="">Рейтинг</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
 
-
-
-            <button type="button" onClick={() => handleAddRating(product.id, rate)}>Submit</button>
-         
+          <button
+            type="button"
+            onClick={() => handleAddRating(product.id, rate)}
+          >
+            Submit
+          </button>
         </Col>
       </Row>
       {!!product.props.length && (

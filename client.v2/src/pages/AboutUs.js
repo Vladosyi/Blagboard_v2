@@ -30,6 +30,7 @@ const AboutUs = () => {
                 className="busket-main-second"
                 href="https://www.avito.ru/user/63e00ea2e395c6d46d14503345e59c13/profile?id=1874125308&src=item&page_from=from_item_card_icon&iid=1874125308"
                 target="_blank"
+                rel="noreferrer"
               >
                 Авито
               </a>
@@ -37,6 +38,7 @@ const AboutUs = () => {
                 className="busket-main-second"
                 href="https://go.2gis.com/m3azq0"
                 target="_blank"
+                rel="noreferrer"
               >
                 2GIS
               </a>

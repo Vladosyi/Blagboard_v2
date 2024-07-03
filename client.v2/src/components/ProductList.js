@@ -1,4 +1,4 @@
-import { Row, Pagination } from "react-bootstrap";
+import { Pagination } from "react-bootstrap";
 import ProductItem from "./ProductItem.js";
 import { useContext } from "react";
 import { AppContext } from "./AppContext.js";

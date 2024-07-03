@@ -1,4 +1,3 @@
-import { Card, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import BUSKET_ICON from "../img/busket_icon.svg";
 import RATING from "../img/rating.svg";
@@ -41,6 +40,7 @@ const ProductItem = ({item} ) => {
               //   onClick={() => addToBasket(device, user)}
               onClick={() => handleClick(item.id)}
             />
+            
           </div>
           <div
             className="device-item__container-img"
@@ -49,6 +49,7 @@ const ProductItem = ({item} ) => {
             <img
               className="device-item__img"
               src={process.env.REACT_APP_IMG_URL + item.image}
+              alt="device"
             />
           </div>
           {/* .device-item__ */}

@@ -16,7 +16,7 @@ const RecItem = ({ item }) => {
   useEffect(({id} = item)=>{
     fetchProdRating(id).then((data) => setRating(data));
 
-  },[])
+  },[item])
 
 
   const handleClick = (productId) => {
@@ -46,6 +46,7 @@ const RecItem = ({ item }) => {
             <img
               className="device-item__img"
               src={process.env.REACT_APP_IMG_URL + item.image}
+              alt="device"
             />
           </div>
           {/* .device-item__ */}

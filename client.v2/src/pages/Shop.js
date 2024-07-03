@@ -1,4 +1,4 @@
-import { Container, Row, Col, Spinner } from "react-bootstrap";
+// import { Container, Row, Col, Spinner } from "react-bootstrap";
 import CategoryBar from "../components/CategoryBar.js";
 import BrandBar from "../components/BrandBar.js";
 import ProductList from "../components/ProductList.js";

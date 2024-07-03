@@ -16,7 +16,7 @@ const Login = observer(() => {
   useEffect(() => {
     if (user.isAdmin) navigate("/admin", { replace: true });
     if (user.isAuth) navigate("/user", { replace: true });
-  }, []);
+  }, [navigate, user.isAdmin, user.isAuth]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();

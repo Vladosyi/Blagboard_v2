@@ -1,10 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import RecItem from "./RecItem";
 import { fetchRecommendation } from "../http/catalogAPI";
 import { AppContext } from "./AppContext";
-// import { observable } from "mobx";
 import { observer } from "mobx-react-lite";
-import ProductItem from "./ProductItem";
 
 const RecBaner = observer(() => {
   const { recommendation } = useContext(AppContext);
@@ -13,7 +11,6 @@ const RecBaner = observer(() => {
     fetchRecommendation().then((data) => (recommendation.products = data));
   }, []);
 
-    // console.log(recommendation.products);
 
   return (
     <div style={{textAlign: 'center', fontSize: '25px', margin: '20px 20px 0 20px'}}> Вам может понравится:

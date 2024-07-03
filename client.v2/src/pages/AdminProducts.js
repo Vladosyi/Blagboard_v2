@@ -110,7 +110,7 @@ const AdminProducts = () => {
                                 <td>{item.name}</td>
                                 <td>
                                     {item.image &&
-                                    <a href={process.env.REACT_APP_IMG_URL + item.image} target="_blank">фото</a>}
+                                    <a href={process.env.REACT_APP_IMG_URL + item.image} target="_blank" rel="noreferrer">фото</a>}
                                 </td>
                                 <td>{item.category?.name || 'NULL'}</td>
                                 <td>{item.brand?.name || 'NULL'}</td>

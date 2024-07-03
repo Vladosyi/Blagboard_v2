@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { Container, Row, Card, Form, Button } from "react-bootstrap";
 import { signup } from "../http/userAPI.js";
 import { observer } from "mobx-react-lite";
-import RATING from "../img/rating.svg";
 import "../style/SignUp.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
@@ -18,7 +17,7 @@ const Signup = observer(() => {
   useEffect(() => {
     if (user.isAdmin) navigate("/admin", { replace: true });
     if (user.isAuth) navigate("/user", { replace: true });
-  }, []);
+  }, [user.isAdmin, user.isAuth, navigate]); //?????????
 
   const handleSubmit = async (event) => {
     event.preventDefault();

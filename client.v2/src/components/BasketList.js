@@ -1,8 +1,6 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AppContext } from "./AppContext.js";
 import { increment, decrement, remove } from "../http/basketAPI.js";
-import { Table, Spinner, Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 import BasketItem from "./BasketItem.js";
 import { observer } from "mobx-react-lite";
 import SideBar from "../components/SideBar.js";
@@ -10,9 +8,9 @@ import "../style/BasketList.css";
 
 const BasketList = observer(() => {
   const { basket } = useContext(AppContext);
-  const [fetching, setFetching] = useState(false);
+  // const [fetching, setFetching] = useState(false);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleIncrement = (id) => {
     increment(id).then((data) => (basket.products = data.products));
@@ -26,9 +24,9 @@ const BasketList = observer(() => {
     remove(id).then((data) => (basket.products = data.products));
   };
 
-  if (fetching) {
-    return <Spinner animation="border" />;
-  }
+  // if (fetching) {
+  //   return <Spinner animation="border" />;
+  // }
 
   return (
     <>

@@ -1,4 +1,3 @@
-import { Container, Navbar, Nav } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import { AppContext } from "./AppContext.js";
 import { useContext } from "react";
@@ -9,7 +8,6 @@ import {
   SHOP_ROUTE,
   ABOUTUS_ROUTE,
   BASKET_ROUTE,
-  SUPPORT_ROUTE,
   ADMIN_ROUTE,
 } from "../utils/consts.js";
 import SHOPPINGCART from "../img/shopping-cart.svg";
