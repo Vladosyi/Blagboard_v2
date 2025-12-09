@@ -26,12 +26,12 @@
 
 .type-Bar__wrapper {
   font-weight: 500;
-  font-size: 25px;
+  font-size: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: rgb(126, 126, 126);
-  padding: 10px;
+  padding: 4px;
   cursor: pointer;
 }
 .type-Bar li {

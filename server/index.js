@@ -1,6 +1,6 @@
 import config from 'dotenv/config'
 import express from 'express'
-import sequelize from './sequelize.js'
+import sequelize from './config/sequelize.js'
 import * as mapping from './models/mapping.js'
 import cors from 'cors'
 import fileUpload from 'express-fileupload'

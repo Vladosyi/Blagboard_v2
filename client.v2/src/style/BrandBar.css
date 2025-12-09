@@ -8,7 +8,11 @@
 }
 
 .brand-bar {
-  flex: 0 0 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* flex: 0 0 150px; */
   
   /* word-wrap: break-word; */
 }
@@ -16,13 +20,14 @@
   /* max-width: 140px; */
 }
 .brand-bar__wrapper {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 }
 .brand-bar__list {
   width: 100%;
   line-height: 1.2;
+  /* font-size: 15px; */
   padding: 10px;
   background-color: #0a20e6;
   border-radius: 24px;
@@ -31,7 +36,7 @@
   color: #ffffff;
   transition: 0.25s;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .brand-bar__item {
