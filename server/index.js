@@ -17,9 +17,15 @@ const __dirname = path.dirname(__filename)
 const PORT = process.env.PORT || 5000
 const app = express()
 
+// Разрешаем запросы с localhost и с Render
+const allowedOrigins = process.env.NODE_ENV === 'production' 
+  ? ['https://blagboard-demo.onrender.com', 'http://localhost:3002']
+  : ['http://localhost:3002'];
+
+
 // CORS: в продакшене разрешаем все (так как фронт и бэк на одном домене)
 if (process.env.NODE_ENV === 'production') {
-  app.use(cors())
+  app.use(cors({ origin: allowedOrigins, credentials: true}));
 } else {
   app.use(cors({ origin: ['http://localhost:3002'], credentials: true }))
 }
