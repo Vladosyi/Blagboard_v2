@@ -1,12 +1,19 @@
 import axios from 'axios'
 
+// Определяем, в каком режиме работает приложение
+// process.env.NODE_ENV будет 'production' на Render после сборки
+const isProduction = process.env.NODE_ENV === 'production'
+
+// Базовый URL: относительный путь для продакшена, абсолютный для локалки
+const baseURL = isProduction ? '/api' : process.env.REACT_APP_API_URL
+
 const guestInstance = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: baseURL,
     withCredentials: true
 })
 
 const authInstance = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: baseURL,
     withCredentials: true
 })
 
