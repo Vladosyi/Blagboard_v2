@@ -11,7 +11,7 @@
     "start": "node index.js",
     "start-dev": "nodemon index.js",
     "python-test": "python python/test.py", 
-    "postinstall": "cd ../client && npm install && npm run build"
+    "postinstall": "cd ../client.v2 && npm install && npm run build"
   },
   "keywords": [
     "Backend",
