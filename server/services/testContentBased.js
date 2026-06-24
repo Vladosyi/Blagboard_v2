@@ -31,13 +31,13 @@ async function testContentBased() {
       return;
     }
 
-    console.log(`\n🔍 Тестируем рекомендации для товара ID: ${id} ("${targetProduct.name}")`);
-    console.log(`   Характеристики: цена=${targetProduct.price}, категория=${targetProduct.category_id}, бренд=${targetProduct.brand_id}, просмотры=${targetProduct.visits}`);
+    console.log(`\nРекомендации для товара ID: ${id} ("${targetProduct.name}")`);
+    console.log(`Характеристики: цена=${targetProduct.price}, категория=${targetProduct.category_id}, бренд=${targetProduct.brand_id}, просмотры=${targetProduct.visits}`);
 
     const service = new ContentBasedRecommendationService();
     const recommendations = await service.getRecommendations(id, 5);
 
-    console.log(`\n📋 Рекомендации для товара ${id}:`);
+    console.log(`\nРекомендации для товара ${id}:`);
     recommendations.forEach((product, index) => {
       console.log(`${index + 1}. ${product.name} (id: ${product.id}, цена: ${product.price}, категория: ${product.category_id}, бренд: ${product.brand_id}, просмотры: ${product.visits})`);
     });
