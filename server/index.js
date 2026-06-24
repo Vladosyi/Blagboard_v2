@@ -7,12 +7,18 @@ import fileUpload from 'express-fileupload'
 import cookieParser from 'cookie-parser'
 import router from './routes/index.js'
 import errorMiddleware from './middleware/errorMiddleware.js'
+import path from 'path'; // ✅ Добавлен модуль для работы с путями
 
 const PORT = process.env.PORT || 5000
-
 const app = express();
 
-app.use(cors({origin: ['http://localhost:3002'], credentials: true}))
+// CORS: в разработке разрешаем только localhost, в продакшене открываем для всех
+if (process.env.NODE_ENV === 'production') {
+  app.use(cors())
+} else {
+  app.use(cors({origin: ['http://localhost:3002'], credentials: true}))
+}
+
 // middleware для работы с json
 app.use(express.json())
 // middleware для статики (img, css)
@@ -24,17 +30,31 @@ app.use(cookieParser(process.env.SECRET_KEY))
 // все маршруты приложения
 app.use('/api', router)
 
+// ✅ БЛОК ДЛЯ ПРОДАКШЕНА (Render / Production)
+if (process.env.NODE_ENV === 'production') {
+  // Путь к собранному React-приложению (находится в соседней папке client.v2)
+  const clientBuildPath = path.join(__dirname, '../client.v2/build');
+  
+  // Раздаём статические файлы React (JS, CSS, картинки)
+  app.use(express.static(clientBuildPath));
+
+  // Все запросы, не попавшие в /api, отдают index.html (SPA-роутинг)
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(clientBuildPath, 'index.html'));
+  });
+}
+
 // обработка ошибок
 app.use(errorMiddleware)
 
 const start = async () => {
-    try {
-        await sequelize.authenticate()
-        await sequelize.sync()
-        app.listen(PORT, () => console.log('Сервер запущен на порту', PORT))
-    } catch(e) {
-        console.log(e)
-    }
+  try {
+    await sequelize.authenticate()
+    await sequelize.sync()
+    app.listen(PORT, () => console.log('Сервер запущен на порту', PORT))
+  } catch(e) {
+    console.log(e)
+  }
 }
 
 start();
