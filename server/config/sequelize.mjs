@@ -1,9 +1,11 @@
 import { Sequelize } from 'sequelize';
 
+let sequelize;
+
 // Проверяем, задана ли DATABASE_URL (режим Render/production)
 if (process.env.DATABASE_URL) {
   // Подключение через строку URL (для Render)
-  export default new Sequelize(process.env.DATABASE_URL, {
+  sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect: 'postgres',
     protocol: 'postgres',
     logging: false,
@@ -17,19 +19,21 @@ if (process.env.DATABASE_URL) {
   });
 } else {
   // Локальное подключение через отдельные параметры
-  export default new Sequelize(
+  sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
     process.env.DB_PASS,
     {
-      dialect: 'postgres',
       host: process.env.DB_HOST,
-      port: process.env.DB_PORT,
-      define: {
-        underscored: true
-      },
+      port: process.env.DB_PORT || 5432,
+      dialect: 'postgres',
       logging: false,
       timezone: 'Europe/Moscow',
+      define: {
+        underscored: true
+      }
     }
   );
 }
+
+export default sequelize;
