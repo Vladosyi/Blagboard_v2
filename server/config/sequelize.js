@@ -10,6 +10,9 @@ if (process.env.DATABASE_URL) {
     protocol: 'postgres',
     logging: false,
     timezone: 'Europe/Moscow',
+    define: {
+        underscored: true
+      },
     dialectOptions: {
       ssl: {
         require: true,           // Render требует SSL
